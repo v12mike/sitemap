@@ -1,11 +1,12 @@
 services:
-    tas2580.sitemap.sitemap:
-        class: tas2580\sitemap\controller\sitemap
+    v12mike.sitemap.sitemap:
+        class: v12mike\sitemap\controller\sitemap
         arguments:
-            - @auth
-            - @config
-            - @dbal.conn
-            - @controller.helper
-            - @dispatcher
-            - %core.php_ext%
-            - @ext.manager
+            - '@auth'
+            - '@config'
+            - '@dbal.conn'
+            - '@controller.helper'
+            - '@dispatcher'
+            - '@content.visibility'
+            - '%core.php_ext%'
+            - '@ext.manager'

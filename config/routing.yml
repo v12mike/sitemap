@@ -1,6 +1,9 @@
-tas2580_sitemap_sitemapindex:
-    pattern: /sitemap.xml
-    defaults: { _controller: tas2580.sitemap.sitemap:index }
-tas2580_sitemap_sitemap:
-    pattern: /sitemap-{id}.xml
-    defaults: { _controller: tas2580.sitemap.sitemap:sitemap }
+v12mike_sitemap_sitemapindex:
+    path: /sitemap.xml
+    defaults: { _controller: v12mike.sitemap.sitemap:index }
+v12mike_sitemap_sitemap:
+    path: /sitemap/f={forum}/t={start}.xml
+    defaults: { _controller: v12mike.sitemap.sitemap:sitemap }
+    requirements:
+        forum: '\d+'
+        start: '\d+'
